@@ -1,0 +1,18 @@
+# Archivos ejecutables generados por Go
+*.exe
+*.test
+
+# Archivos de salida o compilación
+bin/
+dist/
+*.out
+
+# Archivos temporales de depuración
+__debug_bin*
+
+# Configuración local de VS Code
+.vscode/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
