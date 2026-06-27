@@ -43,6 +43,7 @@ Encapsulación mediante atributos privados y métodos públicos.
 Manejo de errores mediante el paquete errores.
 Interfaces mediante el paquete interfaces.
 Comentarios en funciones complejas como inventario, pago y reportes.
+
 Estructura del proyecto
 sistema-gestion-ecommerce-golang/
 │
