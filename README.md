@@ -1,5 +1,7 @@
 Sistema de Gestión de E-commerce en Golang
+
 Descripción
+
 Proyecto académico desarrollado en Golang para representar un Sistema de Gestión de E-commerce. El sistema permite simular un flujo básico de compra mediante usuarios, productos, carrito de compras, pedidos, pagos simulados, inventario y reportes básicos.
 
 Este repositorio corresponde al desarrollo del Trabajo Autónomo de Programación Orientada a Objetos, tomando como base la planeación inicial del sistema y continuando con la codificación funcional.
