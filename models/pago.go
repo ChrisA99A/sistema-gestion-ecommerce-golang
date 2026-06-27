@@ -15,7 +15,7 @@ func NewPagoSimulado(pedidoID int, metodo string, monto float64) (*Pago, error) 
 	}
 
 	if monto <= 0 {
-		return nil, errors.New("el monto del pago debe ser mayor a cero")
+		return nil, errors.New("el monto debe ser mayor a cero")
 	}
 
 	return &Pago{
@@ -24,6 +24,18 @@ func NewPagoSimulado(pedidoID int, metodo string, monto float64) (*Pago, error) 
 		monto:    monto,
 		estado:   "Aprobado",
 	}, nil
+}
+
+func (p Pago) PedidoID() int {
+	return p.pedidoID
+}
+
+func (p Pago) Metodo() string {
+	return p.metodo
+}
+
+func (p Pago) Monto() float64 {
+	return p.monto
 }
 
 func (p Pago) Estado() string {

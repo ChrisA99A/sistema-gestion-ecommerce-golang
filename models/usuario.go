@@ -38,6 +38,10 @@ func (u Usuario) Nombre() string {
 	return u.nombre
 }
 
+func (u Usuario) Correo() string {
+	return u.correo
+}
+
 func (u Usuario) Rol() string {
 	return u.rol
 }

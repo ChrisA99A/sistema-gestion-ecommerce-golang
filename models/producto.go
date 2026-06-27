@@ -16,8 +16,12 @@ func NewProducto(id int, nombre string, categoria string, precio float64, stock 
 		return nil, errors.New("el nombre del producto no puede estar vacío")
 	}
 
+	if categoria == "" {
+		return nil, errors.New("la categoría del producto no puede estar vacía")
+	}
+
 	if precio <= 0 {
-		return nil, errors.New("el precio del producto debe ser mayor a cero")
+		return nil, errors.New("el precio debe ser mayor a cero")
 	}
 
 	if stock < 0 {
@@ -40,6 +44,10 @@ func (p Producto) ID() int {
 
 func (p Producto) Nombre() string {
 	return p.nombre
+}
+
+func (p Producto) Categoria() string {
+	return p.categoria
 }
 
 func (p Producto) Precio() float64 {

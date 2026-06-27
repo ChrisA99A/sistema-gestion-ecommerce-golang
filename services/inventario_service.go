@@ -7,7 +7,7 @@ import (
 
 // ActualizarInventario descuenta del stock los productos agregados al carrito.
 // Antes de modificar el inventario, valida que cada producto exista y tenga stock suficiente.
-// Esta función evita que el sistema registre ventas de productos no disponibles.
+// Esta funciÃ³n evita que el sistema registre ventas de productos no disponibles.
 func ActualizarInventario(productos []*models.Producto, items []models.ItemCarrito) error {
 	for _, item := range items {
 		productoEncontrado := false

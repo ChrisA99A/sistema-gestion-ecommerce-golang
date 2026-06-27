@@ -15,7 +15,7 @@ func NewItemCarrito(producto Producto, cantidad int) (*ItemCarrito, error) {
 	}
 
 	if cantidad > producto.Stock() {
-		return nil, errors.New("no existe stock suficiente para agregar al carrito")
+		return nil, errors.New("stock insuficiente")
 	}
 
 	return &ItemCarrito{
@@ -58,10 +58,18 @@ func NewCarrito(usuarioID int) *Carrito {
 	}
 }
 
+func (c Carrito) UsuarioID() int {
+	return c.usuarioID
+}
+
 func (c *Carrito) AgregarItem(item ItemCarrito) {
 	c.items = append(c.items, item)
 }
 
 func (c Carrito) Items() []ItemCarrito {
 	return c.items
+}
+
+func (c *Carrito) Vaciar() {
+	c.items = []ItemCarrito{}
 }
